@@ -19,7 +19,7 @@ function App() {
       {/* <HeroSection/> */}
       <Routes>
         <Route path='/' element={<ItemListContainer mensaje='Todas las experiencias' disponibles='11 experiencias disponibles'/>} />
-        <Route path='/category/:type' element={<ItemListContainer mensaje='Estás en la categoría'/>} />
+        <Route path='/category/:type' element={<ItemListContainer mensaje='Categoría: '/>} />
         <Route path='/item/:id' element={<ItemDetailContainer />} />
         <Route path='*' element={<Error />} />
       </Routes>

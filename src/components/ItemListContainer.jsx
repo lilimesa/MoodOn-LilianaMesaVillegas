@@ -37,7 +37,7 @@ const ItemListContainer = (props)=> {
             <Container>
                 <Row lg={1}>
                     <Col className='list-container'>
-                        <h1>{mensaje}</h1>
+                        <h1>{mensaje} {type && <span>{type}</span>}</h1>
                         <span>{disponibles}</span>
                         <ItemList data={data}/>
                     </Col>

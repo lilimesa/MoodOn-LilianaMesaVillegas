@@ -2,7 +2,7 @@ const experiencias = [
     {
         id: '1',
         title: 'Cena Gourmet en Restaurante Estrella Michelin',
-        category: 'gastronomica',
+        category: 'gastronomía',
         description: 'Disfruta de una experiencia culinaria única con menú degustación de 7 platos.',
         longDescription: 'Sumérgete en un viaje gastronómico inolvidable en nuestro restaurante galardonado con estrella Michelin. El chef ejecutivo ha preparado un menú degustación exclusivo que combina técnicas innovadoras con ingredientes de temporada de la más alta calidad.',
         price: 185,
@@ -17,7 +17,7 @@ const experiencias = [
     {
         id: '2',
         title: 'Cata de Vinos en Viñedo con Maridaje',
-        category: 'gastronomica',
+        category: 'gastronomía',
         description: 'Descubre vinos excepcionales en un viñedo con vistas espectaculares.',
         longDescription: 'Visita un viñedo boutique en La Rioja y participa en una cata guiada de 5 vinos premium. Aprende sobre el proceso de elaboración, recorre los viñedos y disfruta de un maridaje con productos locales mientras contemplas el atardecer.',
         price: 75,
@@ -32,7 +32,7 @@ const experiencias = [
     {
         id: '3',
         title: 'Crucero al Atardecer con Cena',
-        category: 'gastronomica',
+        category: 'gastronomía',
         description: 'Navega por la costa mientras disfrutas de una cena gourmet.',
         longDescription: 'Embárcate en una experiencia romántica navegando por la costa mediterránea. Disfruta de una cena gourmet de tres platos preparada por nuestro chef a bordo mientras contemplas la puesta de sol y las luces de la ciudad desde el mar.',
         price: 140,
@@ -92,7 +92,7 @@ const experiencias = [
     {
         id: '7',
         title: 'Clase de Cocina Italiana con Chef Profesional',
-        category: 'clase-cocina',
+        category: 'clases de cocina',
         description: 'Aprende a preparar pasta fresca y platos tradicionales italianos.',
         longDescription: 'Descubre los secretos de la cocina italiana de la mano de un chef con formación en Italia. En esta clase práctica aprenderás a hacer pasta fresca desde cero, preparar salsas tradicionales y crear platos auténticos que podrás replicar en casa.',
         price: 95,
@@ -107,7 +107,7 @@ const experiencias = [
     {
         id: '8',
         title: 'Taller de Chocolatería Artesanal',
-        category: 'clase-cocina',
+        category: 'clases de cocina',
         description: 'Crea tus propios bombones y aprende las técnicas de los maestros chocolateros.',
         longDescription: 'Adéntrate en el mundo del chocolate artesanal con este taller práctico. Aprende a templar chocolate, crear bombones rellenos, trufas y tabletas personalizadas. Te llevarás a casa tus creaciones y un kit para seguir practicando.',
         price: 65,
@@ -122,7 +122,7 @@ const experiencias = [
     {
         id: '9',
         title: 'Clase de Sushi y Cocina Japonesa',
-        category: 'clase-cocina',
+        category: 'clases de cocina',
         description: 'Domina el arte del sushi con un chef especializado en cocina japonesa.',
         longDescription: 'Aprende las técnicas auténticas de preparación de sushi en esta clase magistral. Desde el correcto cocido del arroz hasta el corte perfecto del pescado, descubrirás todos los secretos de la cocina japonesa y prepararás varios tipos de rolls y nigiris.',
         price: 105,
@@ -137,7 +137,7 @@ const experiencias = [
     {
         id: '10',
         title: 'Día Completo de Spa y Wellness',
-        category: 'spa',
+        category: 'spa & wellness',
         description: 'Relájate con masajes, tratamientos faciales y acceso a todas las instalaciones.',
         longDescription: 'Regálate un día de relajación total en nuestro spa de lujo. Incluye masaje de 60 minutos, tratamiento facial personalizado, acceso ilimitado a piscinas termales, sauna, baño turco y zona de relajación con vistas panorámicas.',
         price: 150,
@@ -152,7 +152,7 @@ const experiencias = [
     {
         id: '11',
         title: 'Masaje Balinés con Aromaterapia',
-        category: 'spa',
+        category: 'spa & wellness',
         description: 'Tratamiento relajante de 90 minutos con aceites esenciales.',
         longDescription: 'Experimenta la tradición ancestral del masaje balinés combinado con aromaterapia moderna. Este tratamiento de 90 minutos utiliza técnicas de presión profunda, estiramientos suaves y aceites esenciales para liberar tensiones y restaurar el equilibrio.',
         price: 89,

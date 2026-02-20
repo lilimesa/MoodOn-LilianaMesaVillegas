@@ -28,7 +28,7 @@ const NavBar = ()=> {
 
                         <NavDropdown title="Experiencias" id="experiencias-dropdown">
 
-                            <NavDropdown.Item as={NavLink} to="/category/gastronomica">
+                            <NavDropdown.Item as={NavLink} to="/category/gastronomía">
                                 🍽 Gastronomía
                             </NavDropdown.Item>
 
@@ -36,11 +36,11 @@ const NavBar = ()=> {
                                 🏔 Aventura
                             </NavDropdown.Item>
 
-                            <NavDropdown.Item as={NavLink} to="/category/clase-cocina">
+                            <NavDropdown.Item as={NavLink} to="/category/clases de cocina">
                                 👨‍🍳 Clases de Cocina
                             </NavDropdown.Item>
 
-                            <NavDropdown.Item as={NavLink} to="/category/spa">
+                            <NavDropdown.Item as={NavLink} to="/category/spa & wellness">
                                 🧘 Spa & Wellness
                             </NavDropdown.Item>
 
