@@ -1,0 +1,35 @@
+.bg-body-tertiary{
+    background: blue;
+}
+
+.brand-logo img{
+    width: auto;
+    height: 22px;
+}
+.box-center{
+    margin: auto;
+}
+.cart-icon{
+    background: none;
+    border: none;
+    position: relative
+}
+.cart-icon span{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    opacity: .9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    font-weight: 700;
+    text-transform: none;
+    color: #fff;
+    background-color: #ff0095f2;
+}

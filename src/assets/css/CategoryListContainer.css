@@ -1,0 +1,9 @@
+.category-list{
+    border-bottom: 1px solid rgb(178, 178, 178);
+    padding: .9375rem 0;
+}
+
+.category-list button{
+    border-radius: 3.125rem;
+    margin-right: .625rem;
+}
