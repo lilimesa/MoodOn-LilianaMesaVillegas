@@ -74,7 +74,7 @@ const ItemDetail = ({detalle}) => {
         <aside className="booking-card">
 
           <div className="price">
-            <span className="single-amount">€55</span>
+            <span className="single-amount">${detalle.price}.00</span>
             <span className="per-person">por persona</span>
           </div>
 
@@ -89,7 +89,7 @@ const ItemDetail = ({detalle}) => {
 
           <div className="total">
             <span>Total:</span>
-            <strong>€55</strong>
+            <strong>${detalle.price}.00</strong>
           </div>
 
           <button className="booking-btn">

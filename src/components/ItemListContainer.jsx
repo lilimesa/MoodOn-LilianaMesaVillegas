@@ -17,6 +17,7 @@ const ItemListContainer = (props)=> {
     const [data, setData] = useState([])
     console.log('ItemListContainer', data)
     console.log(getProducts())
+    
     useEffect(()=>{
         getProducts()
         .then((res) => setData(res))

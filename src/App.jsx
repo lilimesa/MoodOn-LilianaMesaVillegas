@@ -19,7 +19,7 @@ function App() {
       {/* <HeroSection/> */}
       <Routes>
         <Route path='/' element={<ItemListContainer mensaje='Bienvenidos a mi App!'/>} />
-        <Route path='/item' element={<ItemDetailContainer />} />
+        <Route path='/item/:id' element={<ItemDetailContainer />} />
         <Route path='*' element={<Error />} />
       </Routes>
     </BrowserRouter>
