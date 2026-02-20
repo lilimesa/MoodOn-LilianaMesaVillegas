@@ -1,6 +1,10 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { useParams } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { getProducts } from '../mock/asyncMock';
+import ItemList from './ItemList';
 
 //import css
 import '../assets/css/ItemListContainer.css'
@@ -8,21 +12,24 @@ import '../assets/css/ItemListContainer.css'
 //import child components
 import CategoryListContainer from './CategoryListContainer'
 
-import { useState, useEffect } from 'react';
-import { getProducts } from '../mock/asyncMock';
-import ItemList from './ItemList';
-
 const ItemListContainer = (props)=> {
-    const {mensaje}=props
+    const {mensaje, disponibles}=props
     const [data, setData] = useState([])
-    console.log('ItemListContainer', data)
-    console.log(getProducts())
-    
+    const {type} = useParams()
+    console.log(type)
+
     useEffect(()=>{
-        getProducts()
-        .then((res) => setData(res))
-        .catch((error) => console.log(error, 'error'))
-    },[])
+        getProducts()//pedimos datos
+        .then((res) =>{
+            if(type){
+                //filtro
+                setData(res.filter((prod)=> prod.category === type))
+            }else{
+                setData(res)
+            }
+        })//tratamos la respuesta y la guardamos
+        .catch((error) => console.log(error, 'error')) //atrapamos el error
+    },[type])
 
     return(
         <Container fluid>
@@ -30,8 +37,8 @@ const ItemListContainer = (props)=> {
             <Container>
                 <Row lg={1}>
                     <Col className='list-container'>
-                        <h1>Todas las experiencias</h1>
-                        <span>11 experiencias disponibles</span>
+                        <h1>{mensaje}</h1>
+                        <span>{disponibles}</span>
                         <ItemList data={data}/>
                     </Col>
                 </Row>

@@ -1,9 +1,38 @@
-.category-list{
-    border-bottom: 1px solid rgb(178, 178, 178);
-    padding: .9375rem 0;
+.categories-section {
+  padding: 20px 60px;
+  background: white;
+  border-bottom: 1px solid #eee;
 }
 
-.category-list button{
-    border-radius: 3.125rem;
-    margin-right: .625rem;
+.categories-container {
+  max-width: 1280px;
+  margin: 0 auto;
+
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* PILL */
+.category-pill {
+  padding: 10px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  background: #f1f3f5;
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+  transition: all 0.25s ease;
+}
+
+.category-pill:hover {
+  background: #e5e7eb;
+}
+
+/* ACTIVE STATE */
+.category-pill.active {
+  background: linear-gradient(90deg, #BC15C3, #c40072f2);
+  color: white;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
