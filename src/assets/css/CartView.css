@@ -1,0 +1,185 @@
+.cart-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:20px;
+margin-top: 20px;
+}
+
+.items{
+color:#666;
+font-size:14px;
+}
+
+.empty-cart{
+border:1px solid #f4b5b5;
+background:#fff;
+color:#e53935;
+padding:8px 14px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.notice{
+background:#fff3e0;
+border-left:4px solid orange;
+padding:16px;
+border-radius:10px;
+margin-bottom:30px;
+}
+
+.cart-layout{
+display:grid;
+grid-template-columns:2fr 1fr;
+gap:24px;
+}
+
+.cart-items{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.cart-item{
+display:grid;
+grid-template-columns:150px 1fr 120px;
+gap:20px;
+background:white;
+border-radius:14px;
+padding:16px;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+position:relative;
+}
+
+.delete-btn{
+position:absolute;
+top:12px;
+right:12px;
+border:none;
+background:transparent;
+font-size:18px;
+cursor:pointer;
+color:#e53935;
+transition:0.2s;
+}
+
+.delete-btn:hover{
+transform:scale(1.2);
+}
+
+.cart-item img{
+width:150px;
+height:110px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.item-info{
+position:relative;
+}
+
+.item-image{
+    position: relative;
+}
+.price-badge{
+position:absolute;
+top:10px;
+right:6px;
+background:white;
+padding:4px 10px;
+border-radius:20px;
+font-size:13px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+.item-info h3{
+margin-bottom:6px;
+}
+
+.item-info p{
+font-size:14px;
+color:#666;
+margin-bottom:10px;
+}
+
+.date{
+font-size:13px;
+color:#888;
+display:block;
+margin-bottom:10px;
+}
+
+.qty{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.qty button{
+width:30px;
+height:30px;
+border:none;
+border-radius:6px;
+background:#eee;
+cursor:pointer;
+}
+
+.subtotal{
+text-align:right;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.subtotal span{
+font-size:13px;
+color:#777;
+}
+
+.subtotal strong{
+color:#ff0095f2;
+font-size:18px;
+}
+
+.summary{
+background:white;
+padding:24px;
+border-radius:14px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+height:fit-content;
+position:sticky;
+top:20px;
+}
+
+.summary h3{
+margin-bottom:20px;
+}
+
+.line{
+display:flex;
+justify-content:space-between;
+margin-bottom:10px;
+color:#666;
+}
+
+.total{
+display:flex;
+justify-content:space-between;
+margin:20px 0;
+font-size:26px;
+}
+
+.total strong{
+color:#ff0095f2;
+}
+
+.checkout{
+width:100%;
+border:none;
+padding:14px;
+border-radius:10px;
+font-size:16px;
+color:white;
+cursor:pointer;
+background:linear-gradient(90deg,#8e2de2,#ff007a);
+}

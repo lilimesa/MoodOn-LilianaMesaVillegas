@@ -180,6 +180,10 @@
   color: #666;
   margin-left: 4px;
 }
+.stock-quantity{
+  font-size: 15px;
+  color: #0d7e3e;
+}
 
 .form-group {
   margin-bottom: 16px;
@@ -220,7 +224,8 @@
 
 /* BUTTON */
 .booking-btn {
-    width: 100%;
+  margin-top: 20px;
+  width: 100%;
   padding: 12px;
   border-radius: 10px;
   border: none;

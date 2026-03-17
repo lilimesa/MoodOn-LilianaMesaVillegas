@@ -1,9 +1,31 @@
 import React from 'react';
+import ItemCount from './ItemCount';
+//4. importamos 2 cosas: contexto que quiero usar, el hook para usar el contexto
+import { useState, useContext } from 'react';
+import { CartContext } from '../context/CartContext';
 
 //import css
 import '../assets/css/ItemDetail.css'
+import { Link } from 'react-router-dom';
 
-const ItemDetail = ({detalle}) => {
+const ItemDetail = ({detalle, comprar}) => {
+  //const contexto = useContext(CartContext)
+  //console.log(contexto)
+
+  const [purchase, setPurchase] = useState(false)
+
+  const {cart, addItem, itemQuantity} = useContext(CartContext)
+  console.log(cart)
+
+  const onAdd = (cantidad)=> {
+    //console.log(`Agregas al carrito ${cantidad} unidades del producto ${detalle.title}`)
+    addItem(detalle, cantidad)
+    setPurchase(true)
+
+  }
+
+  const stockActualizado = detalle.stock - itemQuantity(detalle.id)
+
   return (
     <section className="product-detail">
 
@@ -11,7 +33,7 @@ const ItemDetail = ({detalle}) => {
       <div className="product-hero">
         <img src={detalle.img} alt="Tirolesa en bosque"/>
         <div className="rating-badge">
-          ⭐ {detalle.rating} <span>({detalle.rating})</span>
+          ⭐ {detalle.rating} <span>({detalle.reviews})</span>
         </div>
       </div>
 
@@ -74,17 +96,11 @@ const ItemDetail = ({detalle}) => {
         <aside className="booking-card">
 
           <div className="price">
-            <span className="single-amount">${detalle.price}.00</span>
-            <span className="per-person">por persona</span>
-          </div>
-
-          <div className="form-group">
-            <label>Número de personas</label>
-            <div className="quantity-selector">
-              <button>-</button>
-              <span>1</span>
-              <button>+</button>
+            <div>
+              <span className="single-amount">${detalle.price}.00</span>
+              <span className="per-person">por persona</span>
             </div>
+            <span className='stock-quantity'>Disponibles: {stockActualizado}</span>
           </div>
 
           <div className="total">
@@ -92,13 +108,9 @@ const ItemDetail = ({detalle}) => {
             <strong>${detalle.price}.00</strong>
           </div>
 
-          <button className="booking-btn">
-            Añadir al carrito
-          </button>
-
-          <p className="secure-text">
-            Pago seguro · Cancelación gratuita hasta 24h antes
-          </p>
+          <div className="form-group">
+            {purchase ? <Link className='btn btn-dark' to='/cart'>Ir al carrito</Link>:<ItemCount onAdd={onAdd} stock={stockActualizado}/>}
+          </div>
 
         </aside>
 

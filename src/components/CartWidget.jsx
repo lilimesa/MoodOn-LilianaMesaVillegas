@@ -1,11 +1,12 @@
 import { IoCartOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const CartWidget = ()=> {
     return (
-        <button className="cart-icon">
+        <Link className="cart-icon" to="/cart">
             <IoCartOutline size={28} />
             <span>1</span>
-        </button>
+        </Link>
     )
 }
 

@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { getProducts } from '../mock/asyncMock';
 import ItemList from './ItemList';
+import Loader from './Loader';
 
 //import css
 import '../assets/css/ItemListContainer.css'
@@ -15,10 +16,12 @@ import CategoryListContainer from './CategoryListContainer'
 const ItemListContainer = (props)=> {
     const {mensaje, disponibles}=props
     const [data, setData] = useState([])
+    const[loading, setLoading] = useState(false)
     const {type} = useParams()
     console.log(type)
 
     useEffect(()=>{
+        setLoading(true)
         getProducts()//pedimos datos
         .then((res) =>{
             if(type){
@@ -29,21 +32,29 @@ const ItemListContainer = (props)=> {
             }
         })//tratamos la respuesta y la guardamos
         .catch((error) => console.log(error, 'error')) //atrapamos el error
+        .finally(()=> setLoading(false))
     },[type])
 
     return(
-        <Container fluid>
+        <>
             <CategoryListContainer />
-            <Container>
-                <Row lg={1}>
-                    <Col className='list-container'>
-                        <h1>{mensaje} {type && <span>{type}</span>}</h1>
-                        <span>{disponibles}</span>
-                        <ItemList data={data}/>
-                    </Col>
-                </Row>
+        {
+            loading
+            ? <Loader text={type ? 'Cargando categoría' : 'Cargando productos'}/>
+            :<Container fluid>
+                <Container>
+                    <Row lg={1}>
+                        <Col className='list-container'>
+                            <h1>{mensaje} {type && <span>{type}</span>}</h1>
+                            <span>{disponibles}</span>
+                            <ItemList data={data}/>
+                        </Col>
+                    </Row>
+                </Container>
             </Container>
-        </Container>
+
+        }
+        </>
     )
 }
 

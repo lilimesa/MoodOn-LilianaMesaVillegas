@@ -1,0 +1,70 @@
+.cart-empty-state{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+gap:20px;
+}
+
+/* ICONO */
+
+.icon-wrapper{
+position:relative;
+width:140px;
+height:140px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.circle{
+position:absolute;
+width:140px;
+height:140px;
+background:radial-gradient(circle, #e6d9f5, #dcd2e9);
+border-radius:50%;
+}
+
+.bag-icon{
+font-size:50px;
+z-index:2;
+color:#9c4dff;
+}
+
+/* TEXTOS */
+
+.cart-empty-state h1{
+font-size:48px;
+font-weight:600;
+background:linear-gradient(90deg,#a329c9,#ff007a,#5b6cff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.cart-empty-state p{
+font-size:22px;
+color:#5c6670;
+}
+
+/* BOTÓN */
+
+.cta{
+margin-top:20px;
+padding:16px 28px;
+border:none;
+border-radius:20px;
+font-size:18px;
+text-decoration: none;
+color:white;
+cursor:pointer;
+background:#ff0095f2;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+transition:0.2s;
+}
+
+.cta:hover{
+transform:translateY(-2px);
+box-shadow:0 14px 30px rgba(0,0,0,0.2);
+}
